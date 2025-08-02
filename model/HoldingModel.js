@@ -1,9 +1,7 @@
-import model  from "mongoose";
-import HodingsSchema from "../schemas/HoldingsSchemas";
+const { model } = require("mongoose");
 
-const HoldingModel = new model("holdings", HodingsSchema);
+const { HoldingsSchema } = require("../schemas/HoldingSchema");
 
+const HoldingsModel = new model("holding", HoldingsSchema);
 
-module.exports = {
-    HoldingModel
-}
+module.exports = { HoldingsModel };
